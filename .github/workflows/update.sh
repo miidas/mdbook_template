@@ -1,16 +1,11 @@
 #!/bin/bash
 
-# Check last commit message
-#last_commit_msg=$(git log -1 --pretty=%B)
-#if [[ $last_commit_msg =~ "[CI]" ]]; then
-#	exit 0
-#fi
-
 # Install mdbook
-cargo install mdbook
+wget https://github.com/rust-lang/mdBook/releases/download/v0.4.0/mdbook-v0.4.0-x86_64-unknown-linux-gnu.tar.gz
+tar -zxvf mdbook-v0.4.0-x86_64-unknown-linux-gnu.tar.gz
 
 # Rebuild documents
-mdbook build
+./mdbook build
 
 # Push to the blog repository
 git config --global user.name "miidas"
