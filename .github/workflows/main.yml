@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  Update:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: 'recursive'
+    - name: Execute update.sh
+      env:
+        _GITHUB_ACCESS_TOKEN_: ${{secrets._GITHUB_ACCESS_TOKEN_}}
+      run: ./.github/workflows/update.sh
