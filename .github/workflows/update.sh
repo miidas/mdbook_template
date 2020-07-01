@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Install mdbook
-wget https://github.com/rust-lang/mdBook/releases/download/v0.4.0/mdbook-v0.4.0-x86_64-unknown-linux-gnu.tar.gz
+# Download mdbook
+wget -q https://github.com/rust-lang/mdBook/releases/download/v0.4.0/mdbook-v0.4.0-x86_64-unknown-linux-gnu.tar.gz
 tar -zxvf mdbook-v0.4.0-x86_64-unknown-linux-gnu.tar.gz
 
 # Rebuild documents
