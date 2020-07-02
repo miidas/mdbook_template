@@ -7,3 +7,6 @@ title = "mdbook Test"
 
 [build]
 build-dir = "docs"
+
+[output.html]
+mathjax-support = true
